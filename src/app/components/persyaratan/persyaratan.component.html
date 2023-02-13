@@ -1,0 +1,112 @@
+<div class="col py-3">
+  <div class="container">
+    <div class="row">
+      <form>
+        <div class="mb-3" style="display: flex;">
+          <div class="col-md-3">
+          <label for="noNpwp">No. NPWP</label>
+          </div>
+          <div class="col-md-3" style="display: flex;">
+          <input class="form-control" type="text" name="npwp" id="noNpwp" placeholder="no. Npwp" [(ngModel)]="npwp">
+          <button class="btn btn-outline-secondary" (click)="onCari(npwp)">Cari</button>
+        </div>
+        </div>
+       </form>
+    </div>
+  </div>
+
+  <div *ngIf="datanull">
+    <table class="table table-striped" id="reportTable">
+      <tbody>
+      <tr *ngFor="let item of arr">
+        <td style="text-align: center">{{item}} npwp</td>
+        <td>{{item.kota}}</td>
+        <td>{{item.alamatUsaha}}</td>
+        <td>{{item.namaLessee}}</td>
+      </tr>
+      </tbody>
+    </table>
+</div>
+
+<div class="col py-3">
+<div class="container">
+  <div class="row">
+   <h5 class="mb-3">Dokumen Persyaratan</h5>
+
+    <form>
+      <div class="mb-3">
+        <div class="mb-3 d-flex">
+          <label for="namaPT" class="form-label col-3">Nama PT / CV</label>
+          <input [(ngModel)]="konsumen.namaLessee" name="namaLessee" class="form-control" type="text" id="namaPT" placeholder="Nama PT / CV">
+        </div>
+        <div class="mb-3 d-flex">
+          <label for="alamat" class="form-label col-3">Alamat</label>
+          <input class="form-control" type="text" id="alamat" placeholder="Alamat " [(ngModel)]="konsumen.alamatUsaha" name="alamatUsaha">
+        </div>
+        <div class="mb-3 d-flex">
+          <label for="kota" class="form-label col-3">Kota</label>
+          <input class="form-control" type="text" id="kota" placeholder="kota " [(ngModel)]="konsumen.kota" name="kota">
+        </div>
+        <div class="mb-3 d-flex">
+          <label for="npwp" class="form-label col-3">NPWP</label>
+          <input class="form-control" type="text" id="npwp" placeholder="npwp " [(ngModel)]="konsumen.npwp" name="npwp">
+        </div>
+        <div class="mb-3 d-flex">
+          <label for="cp" class="form-label col-3">Contact Person</label>
+          <input class="form-control" type="text" id="cp" placeholder="contact person " [(ngModel)]="konsumen.contactPerson" name="contactPerson">
+        </div>
+        <div class="mb-3 d-flex">
+          <label for="telp" class="form-label col-3">no Telp</label>
+          <input class="form-control" type="text" id="telp" placeholder="telp " [(ngModel)]="konsumen.noTelp" name="noTelp">
+        </div>
+        <div class="mb-3 d-flex">
+          <label for="hp" class="form-label col-3">no Hp</label>
+          <input class="form-control" type="text" id="hp" placeholder="hp " [(ngModel)]="konsumen.noHp" name="noHp">
+        </div>
+        <div class="mb-3 d-flex">
+          <label for="email" class="form-label col-3">Email</label>
+          <input class="form-control" type="text" id="email" placeholder="email " [(ngModel)]="konsumen.email" name="email">
+        </div>
+        <div class="mb-3 d-flex">
+          <label for="aktependirian" class="form-label col-3">Akte Pendirian</label>
+          <input class="form-control" type="file" id="aktependirian" (change)="onChange($event)" #fileUploader>
+        </div>
+        <div class="mb-3 d-flex">
+          <label for="ktpdireksi" class="form-label col-3">KTP Direksi</label>
+          <input class="form-control" type="file" id="ktpdireksi" (change)="onChange($event)" #fileUploader>
+        </div>
+        <div class="mb-3 d-flex">
+          <label for="tdp-siup" class="form-label col-3">TDP / SIUP / NPWP</label>
+          <input class="form-control" type="file" id="tdp-siup" (change)="onChange($event)" #fileUploader>
+        </div>
+        <div class="mb-3 d-flex">
+          <label for="compro" class="form-label col-3">Company Profile</label>
+          <input class="form-control" type="file" id="compro" (change)="onChange($event)" #fileUploader>
+        </div>
+        <div class="mb-3 d-flex">
+          <label for="rekkoran" class="form-label col-3">Rekening Koran</label>
+          <input class="form-control" type="file" id="rekkoran" (change)="onChange($event)" #fileUploader>
+        </div>
+        <div class="mb-3 d-flex">
+          <label for="databarang" class="form-label col-3">Data Barang</label>
+          <input class="form-control" type="file" id="databarang" (change)="onChange($event)" #fileUploader>
+        </div>
+        <div class="mb-3 d-flex">
+          <label for="lapkeuangan" class="form-label col-3">Laporan Keuangan</label>
+          <input class="form-control" type="file" id="lapkeuangan" (change)="onChange($event)" #fileUploader>
+        </div>
+        <div class="mb-3 d-flex">
+          <label for="pks" class="form-label col-3">Kontrak Kerja</label>
+          <input class="form-control" type="file" id="pks" (change)="onChange($event)" #fileUploader>
+<!--          <label >khusus untuk reseller</label>-->
+        </div>
+        <div>
+          <button class="btn btn-outline-secondary float-end" (click)="onSave()">Submit</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,124 @@
+<!--<div class="container">-->
+<!--    <table>-->
+<!--        <thead></thead>-->
+<!--        <tbody>-->
+<!--            <tr *ngFor="let item of users">-->
+<!--                <td>{{item.fullname}}</td>-->
+<!--            </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
+<!--</div>-->
+
+<div class="col py-3">
+  <div class="container">
+    <div class="row">
+      <h5 class="mb-3">.</h5>
+
+      <form>
+        <div class="mb-3">
+          <div class="mb-3 d-flex">
+            <label for="noKontrak" class="form-label col-3">No Kontrak</label>
+            <input class="form-control" type="text" id="noKontrak" placeholder="no kontrak" [(ngModel)]="kontrak.noKontrak" name="noKontrak">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="jenisAplikasi" class="form-label col-3">Jenis Aplikasi</label>
+            <select class="form-control" id="jenisAplikasi" [(ngModel)]="kontrak.jenisAplikasi" name="jenisAplikasi">
+              <option>...</option>
+              <option  value="Direct Lease">Direct Lease</option>
+              <option  value="Lease Back">Lease Back</option>
+            </select>
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="namasup" class="form-label col-3">Nama Supplier</label>
+            <input class="form-control" type="text" id="namasup" placeholder="nama supplier" [(ngModel)]="kontrak.namaSup" name="namaSup">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="alamatsup" class="form-label col-3">Alamat Supplier</label>
+            <input class="form-control" type="text" id="alamatsup" placeholder="alamat supplier" [(ngModel)]="kontrak.alamatSup" name="alamatSup">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="picsup" class="form-label col-3">PIC SUpplier</label>
+            <input class="form-control" type="text" id="picsup" placeholder="pic supplier" [(ngModel)]="kontrak.picSup" name="picSup">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="namakons" class="form-label col-3">Nama Konsumen</label>
+            <input class="form-control" type="text" id="namakons" placeholder="nama konsumen" [(ngModel)]="kontrak.namaKons" name="namaKons">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="alamatkons" class="form-label col-3">alamat konsumen</label>
+            <input class="form-control" type="text" id="alamatkons" placeholder="alamat konsumen" [(ngModel)]="kontrak.alamatKons" name="alamatKons">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="kedudukankons" class="form-label col-3">Kedudukan Konsumen</label>
+            <input class="form-control" type="text" id="kedudukankons" placeholder="kedudukan konsumen" [(ngModel)]="kontrak.kedudukanKons" name="kedudukanKons">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="namaunit" class="form-label col-3">Nama Unit</label>
+            <input class="form-control" type="text" id="namaunit" placeholder="nama unit" [(ngModel)]="kontrak.unit" name="unit">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="merk" class="form-label col-3">Merk Unit</label>
+            <input class="form-control" type="text" id="merk" placeholder="merk unit" [(ngModel)]="kontrak.merkUnit" name="merkUnit">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="tipeunit" class="form-label col-3">Tipe Unit</label>
+            <input class="form-control" type="text" id="tipeunit" placeholder="tipe unit" [(ngModel)]="kontrak.tipeUnit" name="tipeUnit">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="jmlunit" class="form-label col-3">Jumlah Unit</label>
+            <input class="form-control" type="text" id="jmlunit" placeholder="jumlah unit" [(ngModel)]="kontrak.jumlahUnit" name="jumlahUnit">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="hargaunit" class="form-label col-3">Harga Unit</label>
+            <input class="form-control" type="text" id="hargaunit" placeholder="harga unit" [(ngModel)]="kontrak.hargaUnit" name="hargaUnit">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="penempatan" class="form-label col-3">Penempatan Barang</label>
+            <input class="form-control" type="text" id="penempatan" placeholder="penempatan barang" [(ngModel)]="kontrak.penempatan" name="penempatan">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="jmlfas" class="form-label col-3">Jumlah Fasilitas</label>
+            <input class="form-control" type="text" id="jmlfas" placeholder="jumlah fasilitas" [(ngModel)]="kontrak.jumlahFasilitas" name="jumlahFasilitas">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="nilaisisa" class="form-label col-3">Nilai sisa</label>
+            <input class="form-control" type="text" id="nilaisisa" placeholder="nilai sisa" [(ngModel)]="kontrak.nilaiSisa" name="nilaiSisa">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="nilaibiaya" class="form-label col-3">Nilai Pembiayaan</label>
+            <input class="form-control" type="text" id="nilaibiaya" placeholder="nilai pembiayaan" [(ngModel)]="kontrak.nilaiPembiayaan" name="nilaiPembiayaan">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="tenor" class="form-label col-3">Tenor</label>
+            <input class="form-control" type="text" id="tenor" placeholder="tenor" [(ngModel)]="kontrak.tenor" name="tenor">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="pb" class="form-label col-3">Persen Biaya</label>
+            <input class="form-control" type="text" id="pb" placeholder="persen biaya" [(ngModel)]="kontrak.persenBiaya" name="persenBiaya">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="ph" class="form-label col-3">Persen Harga</label>
+            <input class="form-control" type="text" id="ph" placeholder="persen harga" [(ngModel)]="kontrak.persenHarga" name="persenHarga">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="titlesign" class="form-label col-3">Title Signer</label>
+            <input class="form-control" type="text" id="titlesign" placeholder="title signer" [(ngModel)]="kontrak.titleSigner" name="titleSigner">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="namasign" class="form-label col-3">Nama Signer</label>
+            <input class="form-control" type="text" id="namasign" placeholder="nama signer" [(ngModel)]="kontrak.namaSigner" name="namaSigner">
+          </div>
+          <div class="mb-3 d-flex">
+            <label for="jbtnsign" class="form-label col-3">Jabatan Signer</label>
+            <input class="form-control" type="text" id="jbtnsign" placeholder="jabatan signer" [(ngModel)]="kontrak.jabatanSigner" name="jabatanSigner">
+          </div>
+
+          <div>
+            <button class="btn btn-outline-secondary float-end" (click)="onSubmitKontrak()">Save</button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
