@@ -6,6 +6,7 @@ import {ListPersyaratanComponent} from "./components/list-persyaratan/list-persy
 import {KontrakComponent} from "./components/kontrak/kontrak.component";
 import {DashboardComponent} from "./components/dashboard/dashboard.component";
 import {AuthGuardService} from "./services/auth-guard.service";
+import {DokumenComponent} from "./components/dokumen/dokumen.component";
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'order', component: PersyaratanComponent},
   {path: 'list-order', component: ListPersyaratanComponent},
   {path: 'kontrak', component: KontrakComponent},
+  {path: 'print', component: DokumenComponent},
   // {path: 'list-order', component: ListPersyaratanComponent, canActivate: [AuthGuardService]},
   {path: '', redirectTo: 'login', pathMatch: "full"}
 ];

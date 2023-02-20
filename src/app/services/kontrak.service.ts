@@ -29,6 +29,12 @@ export class KontrakService {
     )
   }
 
+  allKontrak(): Observable<Array<IKontrak>>{
+    return this.httpClient.get<Array<IKontrak>>(
+      `${this.baseService.baseURL}${this.endpoint}`
+    )
+  }
+
   create(kontrak: IKontrak): Observable<IKontrakWrapper>{
     const headers = {
       "Content-Type": "application/json"

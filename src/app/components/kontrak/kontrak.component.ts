@@ -35,8 +35,6 @@ export class KontrakComponent implements OnInit {
     );
   }
 
-  clearValue =''
-
   private handleError(error: HttpErrorResponse){
     this.messageError = error.message;
     return throwError(() => Error("Something bad Happend, please try again later."));

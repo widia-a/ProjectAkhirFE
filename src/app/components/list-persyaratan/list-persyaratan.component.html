@@ -1,94 +1,47 @@
 <div class="col py-3">
 <div class="container">
   <div class="row">
-<!--  <h4 class="mb-3">Dokumen Persyaratan</h4>-->
+
+    <div class="table-responsive">
+      <table class="table" datatable [dtOptions]="dtOptions">
+        <thead>
+        <tr>
+          <td>Files</td>
+          <td>Aksi</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of files">
+          <td>
+            <a href="{{item.url}}" target="_blank">
+<!--            <img src="assets/img/pdf.png" alt="pdf" style="width: 24px">-->
+            {{item.name}}
+          </a>
+          </td>
+          <td>
+            <button>update</button>
+            <button>preview</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
     <div class="table-responsive">
     <table class="table" datatable [dtOptions]="dtOptions">
       <thead>
       <tr>
-        <td>Nama PT</td>
+        <td>Nama Lesse</td>
         <td>Status</td>
         <td>Kekurangan Berkas</td>
         <td>Aksi</td>
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td>test</td>
-        <td>Completed</td>
-        <td>test test test</td>
-        <td>
-          <button>update</button>
-          <button>preview</button>
-        </td>
-      </tr>
-      <tr>
-        <td>test</td>
-        <td>Pending</td>
-        <td>test test test</td>
-        <td>
-          <button>update</button>
-          <button>preview</button>
-        </td>
-      </tr>
-      <tr>
-        <td>test</td>
-        <td>Completed</td>
-        <td>test test test</td>
-        <td>
-          <button>update</button>
-          <button>preview</button>
-        </td>
-      </tr>
-      <tr>
-        <td>test</td>
-        <td>Completed</td>
-        <td>test test test</td>
-        <td>
-          <button>update</button>
-          <button>preview</button>
-        </td>
-      </tr>
-      <tr>
-        <td>test</td>
-        <td>Completed</td>
-        <td>test test test</td>
-        <td>
-          <button>update</button>
-          <button>preview</button>
-        </td>
-      </tr>
-      <tr>
-        <td>test</td>
-        <td>Completed</td>
-        <td>test test test</td>
-        <td>
-          <button>update</button>
-          <button>preview</button>
-        </td>
-      </tr>
-      <tr>
-        <td>test</td>
-        <td>Completed</td>
-        <td>test test test</td>
-        <td>
-          <button>update</button>
-          <button>preview</button>
-        </td>
-      </tr>
-      <tr>
-        <td>test</td>
-        <td>Completed</td>
-        <td>test test test</td>
-        <td>
-          <button>update</button>
-          <button>preview</button>
-        </td>
-      </tr>
-      <tr>
-        <td>test</td>
-        <td>Completed</td>
-        <td>test test test</td>
+      <tr *ngFor="let item of lessess">
+        <td>{{item.namaLessee}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.noHp}}</td>
         <td>
           <button>update</button>
           <button>preview</button>
@@ -97,6 +50,35 @@
       </tbody>
     </table>
   </div>
+
+
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+        <tr>
+          <td>nama kons</td>
+          <td>nokontrak</td>
+          <td>tpieunit</td>
+          <td>hargaunit</td>
+          <td>test</td>
+          <td>Aksi</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let k of kontraks">
+          <td>{{k.namaKons}}</td>
+          <td>{{k.noKontrak}}</td>
+          <td>{{k.tipeUnit}}</td>
+          <td>{{k.hargaUnit}}</td>
+          <td>test</td>
+          <td>
+            <button>update</button>
+            <button>preview</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 </div>

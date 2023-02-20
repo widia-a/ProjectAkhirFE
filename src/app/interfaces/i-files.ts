@@ -3,7 +3,8 @@ export interface IFiles {
     data: Blob,
     name: string,
     type: string,
-    createdDate: Date;
+    url: string,
+    createdDate?: Date;
 }
 
 export interface IFilesWrapper{

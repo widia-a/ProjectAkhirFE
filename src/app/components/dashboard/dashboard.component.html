@@ -35,12 +35,12 @@
 
         <li class="sidebar-item">
           <a class="sidebar-link" (click)="onKontrak()">
-            <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Cetak Kontrak</span>
+            <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Kontrak</span>
           </a>
         </li>
 
         <li class="sidebar-item">
-          <a class="sidebar-link" (click)="onPrintPage()">
+          <a class="sidebar-link" href="/print" target="_blank">
             <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Print</span>
           </a>
         </li>
@@ -80,7 +80,7 @@
         <div class="row">
         <h1 class="h3 mb-3" *ngIf="order == true">Order Resume</h1>
         <h1 class="h3 mb-3" *ngIf="listOrder == true">List Order Resume</h1>
-        <h1 class="h3 mb-3" *ngIf="kontrak == true">Cetak Kontrak</h1>
+        <h1 class="h3 mb-3" *ngIf="kontrak == true">Kontrak</h1>
 <!--        <div class="row">-->
           <div class="col-12 col-lg-8 col-xxl-9 d-flex">
             <div class="card flex-fill">
